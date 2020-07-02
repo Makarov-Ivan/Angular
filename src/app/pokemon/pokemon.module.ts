@@ -4,11 +4,12 @@ import { PokemonHeaderComponent } from './pokemon-header/pokemon-header.componen
 import { PokemonFooterComponent } from './pokemon-footer/pokemon-footer.component';
 import { PokemonMainComponent } from './pokemon-main/pokemon-main.component';
 import { PokemonCardItemComponent } from './pokemon-card-item/pokemon-card-item.component';
+import { PokemonWrapperComponent } from './pokemon-wrapper/pokemon-wrapper.component';
 
 
 
 @NgModule({
-  declarations: [PokemonHeaderComponent, PokemonFooterComponent, PokemonMainComponent, PokemonCardItemComponent],
+  declarations: [PokemonHeaderComponent, PokemonFooterComponent, PokemonMainComponent, PokemonCardItemComponent, PokemonWrapperComponent],
   imports: [
     CommonModule
   ]
