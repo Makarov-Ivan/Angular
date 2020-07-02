@@ -6,12 +6,15 @@ import { PokemonMainComponent } from './pokemon-main/pokemon-main.component';
 import { PokemonCardItemComponent } from './pokemon-card-item/pokemon-card-item.component';
 import { PokemonWrapperComponent } from './pokemon-wrapper/pokemon-wrapper.component';
 
-
-
 @NgModule({
-  declarations: [PokemonHeaderComponent, PokemonFooterComponent, PokemonMainComponent, PokemonCardItemComponent, PokemonWrapperComponent],
-  imports: [
-    CommonModule
-  ]
+  declarations: [
+    PokemonHeaderComponent,
+    PokemonFooterComponent,
+    PokemonMainComponent,
+    PokemonCardItemComponent,
+    PokemonWrapperComponent,
+  ],
+  imports: [CommonModule],
+  exports: [PokemonWrapperComponent],
 })
-export class PokemonModule { }
+export class PokemonModule {}
