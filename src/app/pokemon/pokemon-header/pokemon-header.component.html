@@ -1,7 +1,11 @@
 <header>
   <h1>POKEMON</h1>
   <div class="toggle">
-    <button><i class="fa fa-table fa-2x" aria-hidden="true"></i></button>
-    <button><i class="fa fa-list fa-2x" aria-hidden="true"></i></button>
+    <button [ngClass]="{ unVisible: !isListed }" (click)="clickHendle()">
+      <i class="fa fa-table fa-2x" aria-hidden="true"></i>
+    </button>
+    <button [ngClass]="{ unVisible: isListed }" (click)="clickHendle()">
+      <i class="fa fa-list fa-2x" aria-hidden="true"></i>
+    </button>
   </div>
 </header>
