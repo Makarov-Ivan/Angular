@@ -1,6 +1,6 @@
 import { Pokemon } from './pokemon.interface';
 
-export const HEROES: Pokemon[] = [
+export const Pokemons: Pokemon[] = [
   {
     name: 'bulbasaur',
     id: 1,
