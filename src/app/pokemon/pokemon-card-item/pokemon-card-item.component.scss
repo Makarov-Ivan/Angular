@@ -1,0 +1,32 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.poremonCard {
+  border: 3px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+  width: 250px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.4234068627450981) 78%
+  );
+  &__ {
+    &name {
+      font-family: "Fredoka One", cursive;
+    }
+    &pic {
+      width: 80%;
+    }
+    &damage {
+      font-weight: bold;
+      & > span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
