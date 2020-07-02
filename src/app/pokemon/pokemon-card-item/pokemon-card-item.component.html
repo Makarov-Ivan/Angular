@@ -1,6 +1,9 @@
 <ul *ngFor="let pokemon of pokemons">
   <li>
-    <div class="poremonCard">
+    <div
+      class="poremonCard"
+      [ngClass]="{ poremonCard_red: pokemon.damage >= 50 }"
+    >
       <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
       <img
         class="poremonCard__pic"
