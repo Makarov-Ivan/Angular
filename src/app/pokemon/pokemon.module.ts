@@ -5,6 +5,7 @@ import { PokemonFooterComponent } from './pokemon-footer/pokemon-footer.componen
 import { PokemonMainComponent } from './pokemon-main/pokemon-main.component';
 import { PokemonCardItemComponent } from './pokemon-card-item/pokemon-card-item.component';
 import { PokemonWrapperComponent } from './pokemon-wrapper/pokemon-wrapper.component';
+import { IsListService } from './is-list.service';
 
 @NgModule({
   declarations: [
@@ -16,5 +17,6 @@ import { PokemonWrapperComponent } from './pokemon-wrapper/pokemon-wrapper.compo
   ],
   imports: [CommonModule],
   exports: [PokemonWrapperComponent],
+  providers: [IsListService],
 })
 export class PokemonModule {}
