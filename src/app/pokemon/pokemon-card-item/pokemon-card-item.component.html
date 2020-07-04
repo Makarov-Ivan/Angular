@@ -1,20 +1,33 @@
-<ul *ngFor="let pokemon of pokemons">
-  <li>
-    <div
-      class="poremonCard"
-      [ngClass]="{ poremonCard_red: pokemon.damage >= 50 }"
-    >
-      <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
-      <img
-        class="poremonCard__pic"
-        src="../../../assets/pictures/{{ pokemon.id }}.png"
-        alt="{{ pokemon.name }}"
-      />
-      <p class="poremonCard__damage">
-        Damage: <span>{{ pokemon.damage }}</span>
+<div class="grid">
+  <ul>
+    <li *ngFor="let pokemon of pokemons">
+      <div
+        class="poremonCard"
+        [ngClass]="{ poremonCard_red: pokemon.damage >= 50 }"
+      >
+        <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
+        <img
+          class="poremonCard__pic"
+          src="../../../assets/pictures/{{ pokemon.id }}.png"
+          alt="{{ pokemon.name }}"
+        />
+        <p class="poremonCard__damage">
+          Damage: <span>{{ pokemon.damage }}</span>
+        </p>
+        <button>Catch</button>
+        <button>Release</button>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="list">
+  <ol>
+    <li *ngFor="let pokemon of pokemons">
+      <p>
+        <span class="pokemonList__name">{{ pokemon.name | titlecase }}</span>
+        Damage:
+        {{ pokemon.damage }}
       </p>
-      <button>Catch</button>
-      <button>Release</button>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ol>
+</div>
