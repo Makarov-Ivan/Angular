@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IsListService } from '../is-list.service';
 
 @Component({
   selector: 'app-pokemon-header',
@@ -6,11 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-header.component.scss'],
 })
 export class PokemonHeaderComponent implements OnInit {
-  constructor() {}
-  isListed = false;
+  constructor(public isListService: IsListService) {}
   ngOnInit(): void {}
-  clickHendle(): void {
-    this.isListed = !this.isListed;
-    console.log(`listed: ${this.isListed}`);
-  }
 }

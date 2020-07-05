@@ -1,4 +1,4 @@
-<div class="grid">
+<div class="grid" *ngIf="this.isListService.isListed; else list">
   <ul>
     <li *ngFor="let pokemon of pokemons">
       <div
@@ -20,14 +20,16 @@
     </li>
   </ul>
 </div>
-<div class="list">
-  <ol>
-    <li *ngFor="let pokemon of pokemons">
-      <p>
-        <span class="pokemonList__name">{{ pokemon.name | titlecase }}</span>
-        Damage:
-        {{ pokemon.damage }}
-      </p>
-    </li>
-  </ol>
-</div>
+<ng-template #list>
+  <div class="list">
+    <ol class="pokemonList">
+      <li *ngFor="let pokemon of pokemons">
+        <p>
+          <span class="pokemonList__name">{{ pokemon.name | titlecase }}</span>
+          Damage:
+          {{ pokemon.damage }}
+        </p>
+      </li>
+    </ol>
+  </div>
+</ng-template>
