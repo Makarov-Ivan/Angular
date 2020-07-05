@@ -1,10 +1,7 @@
 <div class="grid" *ngIf="this.isListService.isListed; else list">
   <ul>
     <li *ngFor="let pokemon of pokemons">
-      <div
-        class="poremonCard"
-        [ngClass]="{ poremonCard_red: pokemon.damage >= 50 }"
-      >
+      <div class="poremonCard" [appStrongPokemon]="pokemon.damage">
         <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
         <img
           class="poremonCard__pic"

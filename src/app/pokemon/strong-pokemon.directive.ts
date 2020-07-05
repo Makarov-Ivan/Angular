@@ -1,10 +1,15 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appStrongPokemon]'
+  selector: '[appStrongPokemon]',
 })
-export class StrongPokemonDirective {
+export class StrongPokemonDirective implements OnInit {
+  @Input('appStrongPokemon') damage: number;
+  color: string;
+  constructor(private el: ElementRef) {}
 
-  constructor() { }
-
+  ngOnInit(): void {
+    this.color = this.damage >= 50 ? 'red' : 'black';
+    this.el.nativeElement.style.borderColor = this.color;
+  }
 }
