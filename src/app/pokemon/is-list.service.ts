@@ -8,6 +8,6 @@ export class IsListService {
   isListed = false;
   toggle(): void {
     this.isListed = !this.isListed;
-    console.log(`is Listed: ${this.isListed}`);
+    // console.log(`is Listed: ${this.isListed}`);
   }
 }
