@@ -7,6 +7,7 @@ import { PokemonCardItemComponent } from './pokemon-card-item/pokemon-card-item.
 import { PokemonWrapperComponent } from './pokemon-wrapper/pokemon-wrapper.component';
 import { IsListService } from './is-list.service';
 import { ButtonComponent } from './button/button.component';
+import { StrongPokemonDirective } from './strong-pokemon.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ButtonComponent } from './button/button.component';
     PokemonCardItemComponent,
     PokemonWrapperComponent,
     ButtonComponent,
+    StrongPokemonDirective,
   ],
   imports: [CommonModule],
   exports: [PokemonWrapperComponent],
