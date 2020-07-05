@@ -14,8 +14,7 @@
         <p class="poremonCard__damage">
           Damage: <span>{{ pokemon.damage }}</span>
         </p>
-        <button>Catch</button>
-        <button>Release</button>
+        <app-button [name]="pokemon.name | titlecase"></app-button>
       </div>
     </li>
   </ul>
