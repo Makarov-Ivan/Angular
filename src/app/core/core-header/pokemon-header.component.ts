@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IsListService } from '../is-list.service';
+// import { IsListService } from '../is-list.service';
 
 @Component({
   selector: 'app-pokemon-header',
@@ -7,6 +7,6 @@ import { IsListService } from '../is-list.service';
   styleUrls: ['./pokemon-header.component.scss'],
 })
 export class PokemonHeaderComponent implements OnInit {
-  constructor(public isListService: IsListService) {}
-  ngOnInit(): void {}
+  constructor() { }
+  ngOnInit(): void { }
 }
