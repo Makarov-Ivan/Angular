@@ -7,6 +7,7 @@ import { IsListService } from './is-list.service';
 import { ButtonComponent } from './button/button.component';
 import { StrongPokemonDirective } from './strong-pokemon.directive';
 import { RepresentationToggleComponent } from './representation-toggle/representation-toggle.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RepresentationToggleComponent } from './representation-toggle/represent
     ButtonComponent,
     StrongPokemonDirective,
     RepresentationToggleComponent,
+    SearchComponent,
   ],
   imports: [CommonModule],
   exports: [PokemonWrapperComponent],
