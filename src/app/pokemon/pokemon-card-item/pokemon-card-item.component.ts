@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemons } from '../pokemon-main/pokemon.list';
+import { Pokemons } from '../pokemon.list';
 import { IsListService } from '../is-list.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { IsListService } from '../is-list.service';
   styleUrls: ['./pokemon-card-item.component.scss'],
 })
 export class PokemonCardItemComponent implements OnInit {
-  constructor(public isListService: IsListService) {}
+  constructor(public isListService: IsListService) { }
   pokemons = Pokemons;
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
