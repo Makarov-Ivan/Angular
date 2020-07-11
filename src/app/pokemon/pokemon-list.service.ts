@@ -14,5 +14,9 @@ export class PokemonListService {
       el.name.includes(searchName.toLowerCase());
     });
   }
+  getAll(): void {
+    this.pokemonList = Pokemons;
+  }
+
 
 }
