@@ -1,0 +1,14 @@
+.searchBox {
+  text-align: center;
+  margin-top: 10px;
+  &__{
+    &input{
+      width: 50%;
+      margin: 0 10px;
+      height: 2rem; 
+    }
+    &btn{
+      height: 2.5rem;
+    }
+  }
+}
