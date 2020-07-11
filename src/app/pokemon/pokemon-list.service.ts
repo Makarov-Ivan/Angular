@@ -17,6 +17,10 @@ export class PokemonListService {
   getAll(): void {
     this.pokemonList = Pokemons;
   }
-
+  getById(exactId: number): void {
+    this.pokemonList = this.pokemonList.filter(el => {
+      return el.id === exactId ? true : false;
+    });
+  }
 
 }
