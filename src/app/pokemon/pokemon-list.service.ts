@@ -14,13 +14,15 @@ export class PokemonListService {
       el.name.includes(searchName.toLowerCase());
     });
   }
-  getAll(): void {
+  getAll(): Pokemon[] {
     this.pokemonList = Pokemons;
+    return this.pokemonList;
   }
-  getById(exactId: number): void {
+  getById(exactId: number): Pokemon[] {
     this.pokemonList = this.pokemonList.filter(el => {
       return el.id === exactId ? true : false;
     });
+    return this.pokemonList;
   }
 
 }
