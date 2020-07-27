@@ -1,9 +1,24 @@
 <main>
-  <!-- <div class="">1</div>
-  <div class="">2</div>
-  <div class="">3</div>
-  <div class="">4</div>
-  <div class="">5</div>
-  <div class="">6</div> -->
-  <app-pokemon-card-item></app-pokemon-card-item>
+  <div class="grid" *ngIf="this.isListService.isListed; else list">
+    <ul>
+
+      <li *ngFor="let pokemon of pokemons">
+        <app-pokemon-card-item [pokemon]="pokemon"></app-pokemon-card-item>
+
+      </li>
+    </ul>
+  </div>
+  <ng-template #list>
+    <div class="list">
+      <ol class="pokemonList">
+        <li *ngFor="let pokemon of pokemons">
+          <p>
+            <span class="pokemonList__name">{{ pokemon.name | titlecase }}</span>
+            Damage:
+            {{ pokemon.damage }}
+          </p>
+        </li>
+      </ol>
+    </div>
+  </ng-template>
 </main>

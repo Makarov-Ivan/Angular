@@ -1,31 +1,9 @@
-<div class="grid" *ngIf="this.isListService.isListed; else list">
-  <ul>
-    <li *ngFor="let pokemon of pokemons">
-      <div class="poremonCard" [appStrongPokemon]="pokemon.damage">
-        <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
-        <img
-          class="poremonCard__pic"
-          src="../../../assets/pictures/{{ pokemon.id }}.png"
-          alt="{{ pokemon.name }}"
-        />
-        <p class="poremonCard__damage">
-          Damage: <span>{{ pokemon.damage }}</span>
-        </p>
-        <app-button [name]="pokemon.name | titlecase"></app-button>
-      </div>
-    </li>
-  </ul>
+<div class="poremonCard" [appStrongPokemon]="pokemon.damage">
+  <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
+  <img class="poremonCard__pic" src="../../../assets/pictures/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
+  <p class="poremonCard__damage">
+    Damage: <span>{{ pokemon.damage }}</span>
+  </p>
+  <app-button (click)="clcikHandler(pokemon.name)" [value]='value'>
+  </app-button>
 </div>
-<ng-template #list>
-  <div class="list">
-    <ol class="pokemonList">
-      <li *ngFor="let pokemon of pokemons">
-        <p>
-          <span class="pokemonList__name">{{ pokemon.name | titlecase }}</span>
-          Damage:
-          {{ pokemon.damage }}
-        </p>
-      </li>
-    </ol>
-  </div>
-</ng-template>

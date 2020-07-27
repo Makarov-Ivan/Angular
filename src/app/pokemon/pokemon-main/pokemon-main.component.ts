@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IsListService } from '../is-list.service';
+import { PokemonListService } from '../pokemon-list.service';
+import { Pokemon } from '../pokemon.interface';
 
 @Component({
   selector: 'app-pokemon-main',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonMainComponent implements OnInit {
 
-  constructor() { }
+  constructor(public isListService: IsListService, private pokemonService: PokemonListService) { }
+  pokemons: Pokemon[];
 
+  getPokemons(): void {
+    this.pokemons = this.pokemonService.getAll();
+  }
   ngOnInit(): void {
+    this.getPokemons();
   }
 
 }
