@@ -8,6 +8,7 @@ import { ButtonComponent } from './button/button.component';
 import { StrongPokemonDirective } from './strong-pokemon.directive';
 import { RepresentationToggleComponent } from './representation-toggle/representation-toggle.component';
 import { SearchComponent } from './search/search.component';
+import { PokemonInfoComponent } from './pokemon-info/pokemon-info.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SearchComponent } from './search/search.component';
     StrongPokemonDirective,
     RepresentationToggleComponent,
     SearchComponent,
+    PokemonInfoComponent,
   ],
   imports: [CommonModule],
   exports: [PokemonWrapperComponent],

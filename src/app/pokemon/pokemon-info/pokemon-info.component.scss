@@ -1,0 +1,35 @@
+.pokemonInfo{
+  display:grid;
+  height: 90%;
+  border: 2px solid black;
+  border-radius: 15px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50px auto;
+  grid-template-areas: 
+    "header header"
+    "pic name"
+    "pic info"
+    "pic btn";
+  &__{
+    &header{
+      grid-area: header;
+      border-bottom: 2px solid black;
+      text-align: center;
+
+    }
+    &picture{
+      grid-area: pic;
+    }
+    &name{
+      grid-area: name;
+      text-align: center;
+    }
+    &detailedInfo{
+      grid-area: info;
+      background-color: red;
+    }
+    &btn{
+      grid-area: btn;
+    }
+  }
+}
