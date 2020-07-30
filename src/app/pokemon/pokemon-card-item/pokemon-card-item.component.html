@@ -1,9 +1,12 @@
 <div class="poremonCard" [appStrongPokemon]="pokemon.damage">
-  <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
-  <img class="poremonCard__pic" src="../../../assets/pictures/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
-  <p class="poremonCard__damage">
-    Damage: <span>{{ this.pokemon.damage }}</span>
-  </p>
+  <div class='poremonCard__infoLink' routerLink="/info">
+
+    <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
+    <img class="poremonCard__pic" src="../../../assets/pictures/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
+    <p class="poremonCard__damage">
+      Damage: <span>{{ this.pokemon.damage }}</span>
+    </p>
+  </div>
   <app-button (click)="clcikHandler(this.pokemon.name)" [value]='value'>
   </app-button>
   <app-button value='Edit'>

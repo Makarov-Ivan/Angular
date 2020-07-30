@@ -15,6 +15,9 @@
     border: 3px solid red;
   }
   &__ {
+    &infoLink{
+      cursor:pointer;
+    }
     &name {
       font-family: "Fredoka One", cursive;
     }
