@@ -29,8 +29,11 @@ export class PokemonCardItemComponent implements OnInit {
       console.log(`${name} was cathced`);
     }
   }
-  goToEditPage(id: number): void {
+  goToInfoPage(id: number): void {
     this._router.navigate(['info', id]);
+  }
+  goToEditPage(id: number): void {
+    this._router.navigate(['edit', id]);
   }
   ngOnInit(): void {
   }
