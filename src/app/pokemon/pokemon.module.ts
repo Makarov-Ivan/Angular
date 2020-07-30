@@ -12,6 +12,8 @@ import { PokemonInfoComponent } from './pokemon-info/pokemon-info.component';
 import { GridComponent } from './grid/grid.component';
 import { ListComponent } from './list/list.component';
 
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     PokemonMainComponent,
@@ -25,7 +27,16 @@ import { ListComponent } from './list/list.component';
     GridComponent,
     ListComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule,
+    RouterModule.forRoot([
+      {
+        path: 'info', component: PokemonInfoComponent
+      },
+      {
+        path: '', component: PokemonMainComponent
+      }
+    ])
+  ],
   exports: [PokemonWrapperComponent],
   providers: [IsListService],
 })
