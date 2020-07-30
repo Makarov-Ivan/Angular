@@ -1,35 +1,17 @@
-.pokemonInfo{
-  display:grid;
-  height: 90%;
-  border: 2px solid black;
-  border-radius: 15px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50px auto;
-  grid-template-areas: 
-    // "header header"
-    "pic name"
-    "pic info"
-    "pic btn";
-  &__{
-    // &header{
-    //   grid-area: header;
-    //   border-bottom: 2px solid black;
-    //   text-align: center;
-
-    // }
-    &picture{
-      grid-area: pic;
-    }
-    &name{
-      grid-area: name;
-      text-align: center;
-    }
-    &detailedInfo{
-      grid-area: info;
-      background-color: red;
-    }
-    &btn{
-      grid-area: btn;
-    }
-  }
+.grid-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1px 1px;
+ grid-template-areas: "grid-header grid-header" "grid-pic grid-name" "grid-pic grid-info" "grid-pic grid-btn"
 }
+
+.grid-header { grid-area: grid-header; }
+
+.grid-pic { grid-area: grid-pic; }
+
+.grid-name { grid-area: grid-name; }
+
+.grid-info { grid-area: grid-info; }
+
+.grid-btn { grid-area: grid-btn; }
