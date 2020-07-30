@@ -17,6 +17,12 @@
     </div>
   </div>
   <div class="grid-btn">
+
+    <app-button value='Save'>
+    </app-button>
+    <app-button value='Cancel'>
+    </app-button>
+    <br />
     <app-button (click)="onBack()" value='go back'>
     </app-button>
     <app-button value='info' [routerLink]="['/info',pokemon.id]">
