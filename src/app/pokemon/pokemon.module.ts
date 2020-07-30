@@ -14,6 +14,7 @@ import { ListComponent } from './list/list.component';
 import { RouterModule } from '@angular/router';
 import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     GridComponent,
     ListComponent,
     SearchPipe,
+    EditComponent,
   ],
   imports: [CommonModule,
     FormsModule,
