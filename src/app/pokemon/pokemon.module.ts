@@ -13,6 +13,7 @@ import { GridComponent } from './grid/grid.component';
 import { ListComponent } from './list/list.component';
 
 import { RouterModule } from '@angular/router';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RouterModule } from '@angular/router';
     PokemonInfoComponent,
     GridComponent,
     ListComponent,
+    SearchPipe,
   ],
   imports: [CommonModule,
     RouterModule.forRoot([
