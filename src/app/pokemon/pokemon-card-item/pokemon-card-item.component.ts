@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pokemon } from '../pokemon.interface';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-pokemon-card-item',
@@ -9,7 +11,7 @@ import { Pokemon } from '../pokemon.interface';
 
 export class PokemonCardItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
   @Input() pokemon: Pokemon;
 
 
@@ -27,7 +29,9 @@ export class PokemonCardItemComponent implements OnInit {
       console.log(`${name} was cathced`);
     }
   }
-
+  goToEditPage(id: number): void {
+    this._router.navigate(['info', id]);
+  }
   ngOnInit(): void {
   }
 }
