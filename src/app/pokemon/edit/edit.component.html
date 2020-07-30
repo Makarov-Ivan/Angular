@@ -4,14 +4,15 @@
   <div class="grid-pic">
     <img class="poremonCard__pic" src="../../../assets/pictures/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
   </div>
-  <div class="grid-name">Name:<br><input type='text' value="{{pokemon.name | titlecase}}" />
+  <div class="grid-name"><label for="1">Name:</label><br><input id='1' type='text'
+      value="{{pokemon.name | titlecase}}" />
   </div>
   <div class="grid-info">
-    <div class="info__damage">Damage:<br><input type='text' value="{{pokemon.damage}}" />
+    <div class="info__damage"><label for="2">Damage:</label><br><input id='2' type='text' value="{{pokemon.damage}}" />
     </div>
-    <div class="info__date">Discovered: <br><input type='date' value="{{pokemon.date}}" />
+    <div class="info__date"><label for="3">Discovered:</label><br><input id='3' type='date' value="{{pokemon.date}}" />
     </div>
-    <div class="info__other">Other info: <br><textarea rows="5" cols="33"
+    <div class="info__other"><label for="4">Other info: </label><br><textarea id='4' rows="5" cols="33"
         type='text'>{{pokemon.additionalInfo}}</textarea>
     </div>
   </div>
