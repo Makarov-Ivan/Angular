@@ -7,13 +7,13 @@ import { IsListService } from './is-list.service';
 import { ButtonComponent } from './button/button.component';
 import { StrongPokemonDirective } from './strong-pokemon.directive';
 import { RepresentationToggleComponent } from './representation-toggle/representation-toggle.component';
-import { SearchComponent } from './search/search.component';
 import { PokemonInfoComponent } from './pokemon-info/pokemon-info.component';
 import { GridComponent } from './grid/grid.component';
 import { ListComponent } from './list/list.component';
 
 import { RouterModule } from '@angular/router';
 import { SearchPipe } from './search.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,13 +23,13 @@ import { SearchPipe } from './search.pipe';
     ButtonComponent,
     StrongPokemonDirective,
     RepresentationToggleComponent,
-    SearchComponent,
     PokemonInfoComponent,
     GridComponent,
     ListComponent,
     SearchPipe,
   ],
   imports: [CommonModule,
+    FormsModule,
     RouterModule.forRoot([
       {
         path: 'info/:id', component: PokemonInfoComponent
@@ -40,6 +40,6 @@ import { SearchPipe } from './search.pipe';
     ])
   ],
   exports: [PokemonWrapperComponent],
-  providers: [IsListService],
+  providers: [IsListService, SearchPipe],
 })
 export class PokemonModule { }

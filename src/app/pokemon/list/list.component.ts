@@ -10,6 +10,7 @@ export class ListComponent implements OnInit {
 
   constructor() { }
   @Input() pokemons: Pokemon[];
+  @Input() searchText: string;
 
   ngOnInit(): void {
   }

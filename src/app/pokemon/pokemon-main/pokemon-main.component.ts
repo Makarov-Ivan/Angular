@@ -12,6 +12,7 @@ export class PokemonMainComponent implements OnInit {
 
   constructor(public isListService: IsListService, private pokemonService: PokemonListService) { }
   pokemons: Pokemon[];
+  searchText = '';
 
   getPokemons(): void {
     this.pokemons = this.pokemonService.getAll();
@@ -19,5 +20,8 @@ export class PokemonMainComponent implements OnInit {
   ngOnInit(): void {
     this.getPokemons();
   }
-
+  searchBtn(v: string): void {
+    this.searchText = v;
+    console.log('this.searchText: ', this.searchText);
+  }
 }
