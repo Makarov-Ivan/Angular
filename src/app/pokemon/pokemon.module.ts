@@ -30,7 +30,7 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule,
     RouterModule.forRoot([
       {
-        path: 'info', component: PokemonInfoComponent
+        path: 'info/:id', component: PokemonInfoComponent
       },
       {
         path: '', component: PokemonMainComponent
