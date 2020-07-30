@@ -11,13 +11,14 @@
     </div>
     <div class="info__date">Discovered: <br><input type='date' value="{{pokemon.date}}" />
     </div>
-    <div class="info__other">Other info: <br><input type='text' value="{{pokemon.additionalInfo}}" />
+    <div class="info__other">Other info: <br><textarea rows="5" cols="33"
+        type='text'>{{pokemon.additionalInfo}}</textarea>
     </div>
   </div>
   <div class="grid-btn">
     <app-button (click)="onBack()" value='go back'>
     </app-button>
-    <app-button value='Edit'>
+    <app-button value='info' [routerLink]="['/info',pokemon.id]">
     </app-button>
   </div>
 </div>
