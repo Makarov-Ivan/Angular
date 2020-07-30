@@ -19,7 +19,7 @@
     </app-button>
     <app-button (click)="onBack()" value='go back'>
     </app-button>
-    <app-button value='Edit'>
+    <app-button value='Edit' [routerLink]="['/edit',pokemon.id]">
     </app-button>
   </div>
 </div>
