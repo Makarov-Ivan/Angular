@@ -29,7 +29,16 @@ export class EditComponent implements OnInit {
     });
     this.pokemon.date = this.pokemon.date ? this.pokemon.date : new Date().toLocaleDateString();
   }
-
+  saveChangesOfPokemons(id, name, damage, date, additionalInfo): void {
+    this._PokemonListService.changePokemonArr(id, name, damage, date, additionalInfo)
+    alert(`${name} was changed`);
+    this._router.navigate(['info', id]);
+  }
+  cancelChange(id, name): void {
+    if (confirm(`Do you want to stop edit ${name}?`)) {
+      this._router.navigate(['info', id]);
+    }
+  }
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }

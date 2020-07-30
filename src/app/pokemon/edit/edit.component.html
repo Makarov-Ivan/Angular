@@ -4,23 +4,26 @@
   <div class="grid-pic">
     <img class="poremonCard__pic" src="../../../assets/pictures/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
   </div>
-  <div class="grid-name"><label for="1">Name:</label><br><input id='1' type='text'
+  <div class="grid-name"><label for="1">Name:</label><br><input #pName id='1' type='text'
       value="{{pokemon.name | titlecase}}" />
   </div>
   <div class="grid-info">
-    <div class="info__damage"><label for="2">Damage:</label><br><input id='2' type='text' value="{{pokemon.damage}}" />
+    <div class="info__damage"><label for="2">Damage:</label><br><input #pDamage id='2' type='text'
+        value="{{pokemon.damage}}" />
     </div>
-    <div class="info__date"><label for="3">Discovered:</label><br><input id='3' type='date' value="{{pokemon.date}}" />
+    <div class="info__date"><label for="3">Discovered:</label><br><input #pDate id='3' type='date'
+        value="{{pokemon.date}}" />
     </div>
-    <div class="info__other"><label for="4">Other info: </label><br><textarea id='4' rows="5" cols="33"
+    <div class="info__other"><label for="4">Other info: </label><br><textarea #pAdditional id='4' rows="5" cols="33"
         type='text'>{{pokemon.additionalInfo}}</textarea>
     </div>
   </div>
   <div class="grid-btn">
 
-    <app-button value='Save'>
+    <app-button value='Save'
+      (click)='saveChangesOfPokemons(pokemon.id, pName.value, pDamage.value, pDate.value, pAdditional.value)'>
     </app-button>
-    <app-button value='Cancel'>
+    <app-button value='Cancel' (click)="cancelChange(pokemon.id, pName.value)">
     </app-button>
     <br />
     <app-button (click)="onBack()" value='go back'>
