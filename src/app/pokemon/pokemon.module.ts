@@ -38,6 +38,9 @@ import { EditComponent } from './edit/edit.component';
       },
       {
         path: '', component: PokemonMainComponent
+      },
+      {
+        path: 'edit/:id', component: EditComponent
       }
     ])
   ],
