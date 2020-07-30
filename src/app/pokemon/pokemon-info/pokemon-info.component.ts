@@ -6,7 +6,7 @@ import { Pokemon } from '../pokemon.interface';
 @Component({
   selector: 'app-pokemon-info',
   templateUrl: './pokemon-info.component.html',
-  styleUrls: ['./pokemon-info.component.scss']
+  styleUrls: ['./pokemon-info.component.scss',]
 })
 export class PokemonInfoComponent {
 
