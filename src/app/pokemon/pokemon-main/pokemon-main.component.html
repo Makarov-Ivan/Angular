@@ -1,0 +1,22 @@
+<main>
+  <app-representation-toggle></app-representation-toggle>
+  <!-- <app-search () ></app-search> -->
+  <!-- <input type="text" #searchInput>
+  <button (click)="searchBtn(searchInput.value)">search</button> -->
+  <div class="searchBox">
+    <input class="searchBox__input" type="text" placeholder="Which pokemon do you want to find?" #searchInput>
+    <button class="searchBox__btn" (click)="searchBtn(searchInput.value)">Search</button>
+  </div>
+
+  <div class="grid" *ngIf="this.isListService.isListed; else list">
+
+    <app-grid [pokemons]=this.pokemons [searchText]='this.searchText'></app-grid>
+    <router-outlet></router-outlet>
+
+  </div>
+  <ng-template #list>
+
+    <app-list [pokemons]=this.pokemons [searchText]='this.searchText'></app-list>
+    <router-outlet></router-outlet>
+  </ng-template>
+</main>

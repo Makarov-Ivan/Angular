@@ -1,0 +1,60 @@
+.grid-grid-container {
+  margin:0 auto 2rem;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 6rem auto repeat(2, 0.8fr);
+  gap: 1px 1px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.4234068627450981) 78%
+  );
+  align-items: center;
+ grid-template-areas: "grid-header grid-header" "grid-pic grid-name" "grid-pic grid-info" "grid-pic grid-btn"
+}
+
+.grid-header { 
+  grid-area: grid-header;
+  text-align: center;
+
+}
+
+.grid-pic { 
+  grid-area: grid-pic;
+  position: relative;
+  & img {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    border: 2px solid black;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.4234068627450981) 78%
+    );
+  }
+}
+
+.grid-name { grid-area: grid-name; }
+
+.grid-info { grid-area: grid-info; }
+
+.grid-btn { 
+  grid-area: grid-btn;
+  text-align: center;
+}
+
+p {
+  text-decoration: underline;
+  font-family: "Fredoka One", cursive;
+  color:rgb(101, 126, 50);
+  font-size: 1.2rem;
+}

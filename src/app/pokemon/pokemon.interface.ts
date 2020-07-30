@@ -1,0 +1,7 @@
+export interface Pokemon {
+  name: string;
+  id: number;
+  damage: number;
+  date?: string;
+  additionalInfo?: string;
+}

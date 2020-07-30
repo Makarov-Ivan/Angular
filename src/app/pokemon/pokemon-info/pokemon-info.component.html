@@ -1,0 +1,25 @@
+<div class="grid-grid-container">
+  <div class="grid-header">Information page about:<p>{{pokemon.name | titlecase}}</p>
+  </div>
+  <div class="grid-pic">
+    <img class="poremonCard__pic" src="../../../assets/pictures/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
+  </div>
+  <div class="grid-name">Name:<p>{{pokemon.name | titlecase}}</p>
+  </div>
+  <div class="grid-info">
+    <div class="info__damage">Damage:<p>{{pokemon.damage}}</p>
+    </div>
+    <div class="info__date">Discovered: <p>{{pokemon.date}}</p>
+    </div>
+    <div class="info__other">Other info: <p>{{pokemon.additionalInfo}}</p>
+    </div>
+  </div>
+  <div class="grid-btn">
+    <app-button (click)="clcikHandler(pokemon.name)" [value]='btnValue'>
+    </app-button>
+    <app-button (click)="onBack()" value='go back'>
+    </app-button>
+    <app-button value='Edit'>
+    </app-button>
+  </div>
+</div>
