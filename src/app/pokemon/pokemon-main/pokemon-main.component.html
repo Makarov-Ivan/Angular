@@ -1,16 +1,18 @@
 <main>
   <app-search></app-search>
   <div class="grid" *ngIf="this.isListService.isListed; else list">
-    <ul>
+    <!-- <ul>
 
       <li *ngFor="let pokemon of pokemons">
         <app-pokemon-card-item [pokemon]="pokemon"></app-pokemon-card-item>
 
       </li>
-    </ul>
+    </ul> -->
+    <app-grid [pokemons]=this.pokemons></app-grid>
+    <router-outlet></router-outlet>
   </div>
   <ng-template #list>
-    <div class="list">
+    <!-- <div class="list">
       <ol class="pokemonList">
         <li *ngFor="let pokemon of pokemons">
           <p>
@@ -20,6 +22,8 @@
           </p>
         </li>
       </ol>
-    </div>
+    </div> -->
+    <app-list [pokemons]=this.pokemons></app-list>
+    <router-outlet></router-outlet>
   </ng-template>
 </main>
