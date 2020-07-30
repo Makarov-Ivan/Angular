@@ -14,15 +14,18 @@ export class PokemonListService {
       el.name.includes(searchName.toLowerCase());
     });
   }
+  getById(id: number): Pokemon {
+    return this.pokemonList.filter(el => el.id === id)[0];
+  }
   getAll(): Pokemon[] {
     this.pokemonList = Pokemons;
     return this.pokemonList;
   }
-  getById(exactId: number): Pokemon[] {
-    this.pokemonList = this.pokemonList.filter(el => {
-      return el.id === exactId ? true : false;
-    });
-    return this.pokemonList;
-  }
+  // getById(exactId: number): Pokemon[] {
+  //   this.pokemonList = this.pokemonList.filter(el => {
+  //     return el.id === exactId ? true : false;
+  //   });
+  //   return this.pokemonList;
+  // }
 
 }
