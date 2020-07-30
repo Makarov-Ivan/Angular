@@ -9,11 +9,7 @@ export class PokemonListService {
 
   constructor() { }
   pokemonList: Pokemon[] = Pokemons;
-  filter(searchName: string): void {
-    this.pokemonList = this.pokemonList.filter((el) => {
-      el.name.includes(searchName.toLowerCase());
-    });
-  }
+
   public getById(id: any): Pokemon {
     return Pokemons.find(p => p.id === Number(id));
   }
@@ -21,11 +17,6 @@ export class PokemonListService {
     this.pokemonList = Pokemons;
     return this.pokemonList;
   }
-  // getById(exactId: number): Pokemon[] {
-  //   this.pokemonList = this.pokemonList.filter(el => {
-  //     return el.id === exactId ? true : false;
-  //   });
-  //   return this.pokemonList;
-  // }
+
 
 }
