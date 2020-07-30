@@ -1,6 +1,6 @@
 <div class="list">
   <ol class="pokemonList">
-    <li *ngFor="let pokemon of pokemons" routerLink="/info">
+    <li *ngFor="let pokemon of pokemons" [routerLink]="['/info',pokemon.id]">
       <p>
         <span class="pokemonList__name">{{ pokemon.name | titlecase }}</span>
         Damage:

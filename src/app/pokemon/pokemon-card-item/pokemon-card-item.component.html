@@ -1,5 +1,5 @@
 <div class="poremonCard" [appStrongPokemon]="pokemon.damage">
-  <div class='poremonCard__infoLink' routerLink="/info">
+  <div class='poremonCard__infoLink' [routerLink]="['/info',pokemon.id]">
 
     <h2 class="poremonCard__name">{{ pokemon.name | titlecase }}</h2>
     <img class="poremonCard__pic" src="../../../assets/pictures/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
