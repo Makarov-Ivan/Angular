@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PokemonListService } from '../pokemon-list.service';
+import { Pokemon } from '../pokemon.interface';
 
 @Component({
   selector: 'app-edit',
@@ -7,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+
+    private _Activatedroute: ActivatedRoute,
+    private _router: Router,
+    private _PokemonListService: PokemonListService
+  ) { }
+
+  sub;
+  id;
+  pokemon: Pokemon;
+
 
   ngOnInit(): void {
+    this.sub = this._Activatedroute.paramMap.subscribe(params => {
+      this.id = params.get('id');
+      this.pokemon = this._PokemonListService.getById(this.id);
+    });
+    this.pokemon.date = this.pokemon.date ? this.pokemon.date : new Date().toLocaleDateString();
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
+  onBack(): void {
+    this._router.navigate(['']);
   }
 
 }

@@ -1,1 +1,23 @@
-<p>edit works!</p>
+<div class="grid-grid-container">
+  <div class="grid-header">Edit page:<p>{{pokemon.name | titlecase}}</p>
+  </div>
+  <div class="grid-pic">
+    <img class="poremonCard__pic" src="../../../assets/pictures/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
+  </div>
+  <div class="grid-name">Name:<br><input type='text' value="{{pokemon.name | titlecase}}" />
+  </div>
+  <div class="grid-info">
+    <div class="info__damage">Damage:<br><input type='text' value="{{pokemon.damage}}" />
+    </div>
+    <div class="info__date">Discovered: <br><input type='date' value="{{pokemon.date}}" />
+    </div>
+    <div class="info__other">Other info: <br><input type='text' value="{{pokemon.additionalInfo}}" />
+    </div>
+  </div>
+  <div class="grid-btn">
+    <app-button (click)="onBack()" value='go back'>
+    </app-button>
+    <app-button value='Edit'>
+    </app-button>
+  </div>
+</div>
