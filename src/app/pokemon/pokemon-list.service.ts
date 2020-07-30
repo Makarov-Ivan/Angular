@@ -14,8 +14,8 @@ export class PokemonListService {
       el.name.includes(searchName.toLowerCase());
     });
   }
-  getById(id: number): Pokemon {
-    return this.pokemonList.filter(el => el.id === id)[0];
+  public getById(id: any): Pokemon {
+    return Pokemons.find(p => p.id === Number(id));
   }
   getAll(): Pokemon[] {
     this.pokemonList = Pokemons;
