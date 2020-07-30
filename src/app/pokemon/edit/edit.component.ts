@@ -35,7 +35,7 @@ export class EditComponent implements OnInit {
     this._router.navigate(['info', id]);
   }
   cancelChange(id, name): void {
-    if (confirm(`Do you want to stop edit ${name}?`)) {
+    if (confirm(`Do you want to stop edit ${name}? All unsaved changes will be lost`)) {
       this._router.navigate(['info', id]);
     }
   }
