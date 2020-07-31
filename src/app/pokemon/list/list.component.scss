@@ -1,0 +1,11 @@
+.pokemonList {
+  & li{
+    cursor:pointer;
+  }
+  & li:nth-child(2n) {
+    background-color: rgba(165, 165, 165, 0.63);
+  }
+  &__name {
+    font-family: "Fredoka One", cursive;
+  }
+}

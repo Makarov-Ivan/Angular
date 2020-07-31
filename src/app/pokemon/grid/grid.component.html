@@ -1,0 +1,7 @@
+<ul>
+
+  <li *ngFor="let pokemon of (pokemons | search: searchText)">
+    <app-pokemon-card-item [pokemon]="pokemon"></app-pokemon-card-item>
+
+  </li>
+</ul>

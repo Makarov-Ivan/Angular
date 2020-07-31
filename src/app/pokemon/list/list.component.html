@@ -1,0 +1,11 @@
+<div class="list">
+  <ol class="pokemonList">
+    <li *ngFor="let pokemon of (pokemons | search: searchText)" [routerLink]="['/info',pokemon.id]">
+      <p>
+        <span class="pokemonList__name">{{ pokemon.name | titlecase }}</span>
+        Damage:
+        {{ pokemon.damage }}
+      </p>
+    </li>
+  </ol>
+</div>
